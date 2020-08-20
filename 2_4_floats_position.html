@@ -147,19 +147,28 @@
       <!--##################START HERE###################-->
 
       <!-- FLOATS -->
-      <!-- float 有什么用？？？？ -->
-      <div class="float-right">Float left</div>
+      <!-- float 用来掌控 div 随着窗口大小而移动 -->
+      <!-- float 的唯一用出就是写在 div 中，而 text 只针对 p -->
+      <!-- float-none 默认的是左边对齐 -->
+      <div class="text-sm-right">
+        <button class="btn btn-primary">Float right on text</button>
+      </div>
       <br />
-      <div class="float-left">Float right</div>
+      <div class="float-right">
+        <button class="btn btn-primary">Float right</button>
+      </div>
       <br />
       <div class="float-none">Float none</div>
       <br />
 
       <!-- RESPONSIVE FLOATS -->
       <!-- 这里就和 RESPONSIVE ALIGN 是一样的 -->
-      <div class="float-sm-right">Float right on small or wider</div>
+      <div class="float-sm-right">
+        <button class="btn btn-primary">Float right on small or wider</button>
+      </div>
       <br />
-      <div class="float-md-right">Float right on medium or wider</div>
+      <br />
+      <div class="float-md-right d-block">Float right on medium or wider</div>
       <br />
       <div class="float-lg-right">Float right on large or wider</div>
       <br />
