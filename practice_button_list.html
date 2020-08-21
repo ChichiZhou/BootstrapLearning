@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+
+    <title>Bootstrap Sandbox</title>
+  </head>
+
+  <body>
+    <!--##################START HERE###################-->
+    <!-- 不同 type 的 button -->
+    <div>
+      <button type="button" class="btn btn-primary">Button</button>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="reset" class="btn btn-primary">Reset</button>
+    </div>
+
+    <!-- 外框的 button -->
+    <div>
+      <button type="button" class="btn btn-outline-primary">
+        Primary Outline
+      </button>
+    </div>
+
+    <!-- 不同 state 的 button -->
+    <div>
+      <button type="button" class="btn btn-primary active">
+        Active Button
+      </button>
+      <button type="button" class="btn btn-primary disabled">
+        Disabled Button
+      </button>
+    </div>
+
+    <!-- 直接对 anchor 使用 button -->
+    <div>
+      <a href="http://google.com" class="btn btn-warning">This is anchor</a>
+    </div>
+
+    <!-- 在 button 的同一行中添加别的 component，如果没有 btn-toolbar 则另外的 component 会跑到下面 -->
+    <div class="btn btn-toolbar">
+      <button class="btn btn-primary">hello</button>
+      <!-- input-group 的作用是在 input 前面加一些前后缀 -->
+      <div class="input-group">
+        <input class="form-control" type="text" placeholder="search" />
+      </div>
+    </div>
+
+    <div class="btn">
+      <button class="btn btn-warning">hello</button>
+      <div class="input-group">
+        <input type="text" placeholder="search" />
+      </div>
+    </div>
+
+    <!-- 一个能够下拉的 button -->
+    <!-- 这里必须写到一个 div 中，否则 button 和 dropdown item 会隔的很远-->
+    <div class="dropdown">
+      <button
+        class="btn btn-primary"
+        data-toggle="dropdown"
+        data-target="#dropdownbuttonPrimary"
+      >
+        Drop down
+      </button>
+      <div class="dropdown-menu">
+        <a href="#" class="dropdown-item">Link One Primary</a>
+        <a href="#" class="dropdown-item">Link Two Primary</a>
+        <!-- 用来分割 -->
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">Link Three Primary</a>
+      </div>
+    </div>
+    <!-- wrong method -->
+    <button
+      class="btn btn-warning"
+      data-toggle="dropdown"
+      data-target="#dropdownbutton"
+    >
+      Drop down
+    </button>
+    <div class="dropdown" id="dropdownbutton">
+      <div class="dropdown-menu">
+        <a href="#" class="dropdown-item">Link One</a>
+        <a href="#" class="dropdown-item">Link Two</a>
+        <!-- 用来分割 -->
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">Link Three</a>
+      </div>
+    </div>
+    <!-- List -->
+    <!-- List-group 用来美观 -->
+    <h2>Without list-group</h2>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+    <h2>With list-group</h2>
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-primary">Item 1</li>
+      <li class="list-group-item list-group-item-secondary">Item 2</li>
+      <li class="list-group-item list-group-item-success">Item 3</li>
+      <li class="list-group-item list-group-item-info">Item 4</li>
+    </ul>
+    <!-- 直接使用 anchor，这样就不用在 li 中添加 anchor 了 -->
+    <h2>Use anchor as element</h2>
+    <ul class="list-group">
+      <a href="" class="list-group-item">Item 1</a>
+      <a href="" class="list-group-item">Item 2</a>
+      <a href="" class="list-group-item">Item 3</a>
+      <a href="" class="list-group-item">Item 4</a>
+    </ul>
+    <h2>Use badage</h2>
+    <ul class="list-group mb-5">
+      <li class="list-group-item">My List Item One</li>
+      <li class="list-group-item">My List Item Two</li>
+      <!-- d-flex 作用是 display 按照 flex  -->
+      <!-- justify-content-between -->
+      <!-- align-items-center 作用是将 badge 的 item 放在中间-->
+      <li
+        class="list-group-item d-flex justify-content-between align-items-center"
+      >
+        My List Item Three
+        <!-- 添加一个 badge -->
+        <span class="badge badge-primary">30</span>
+      </li>
+      <li class="list-group-item">
+        My List Item Four
+        <span class="badge badge-primary">40</span>
+      </li>
+      <li class="list-group-item">My List Item Five</li>
+    </ul>
+    <!-- 写成 breadcrumb -->
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">Home</li>
+    </ol>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="#">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="#">Users</a>
+      </li>
+    </ol>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="#">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="#">Users</a>
+      </li>
+      <li class="breadcrumb-item">Brad</li>
+    </ol>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

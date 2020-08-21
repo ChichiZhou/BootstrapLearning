@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+
+    <title>Bootstrap Sandbox</title>
+  </head>
+
+  <body>
+    <!--##################START HERE###################-->
+    <!-- input-group 的作用：input-group 作用是为了给 input 输入框加前缀和后缀 -->
+    <div class="container">
+      <!-- 在 input 输入框前面加上一些字符 -->
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">@</span>
+        </div>
+        <input type="text" class="form-control" />
+      </div>
+      <!-- 如果不用 input-group-text, @ 的格式会不同 -->
+      <div class="input-group mb-3">
+        <div>@</div>
+        <input type="text" class="form-control" />
+      </div>
+      <!-- 使用多个输入框 -->
+      <div class="input-group mb-3">
+        <div>
+          <span class="input-group-text">Name & Email</span>
+        </div>
+        <input type="text" class="form-control" />
+        <input type="text" class="form-control" />
+      </div>
+      <!-- 在 input 输入框后面添加一个 button -->
+      <div class="input-group">
+        <input type="text" class="form-control" />
+        <!-- button 直接加上就行了，不需要别的操作 -->
+        <button class="btn btn-primary">add</button>
+      </div>
+
+      <!-- 创建 form -->
+      <!-- 一个最基础的 form -->
+      <h2>Create form</h2>
+      <form>
+        <div class="form-group">
+          <label for="nameForBasicForm">Name</label>
+          <input
+            id="nameForBasicForm"
+            type="text"
+            class="form-control"
+            placeholder="Enter name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="passwordForBasicForm">Password</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter password"
+          />
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

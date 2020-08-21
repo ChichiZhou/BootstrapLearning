@@ -145,9 +145,8 @@
 
     <div class="container">
       <!--####################START HERE#####################-->
-
       <!-- BASIC INPUT GROUPS -->
-      <!-- input-group 是什么？？？？？ -->
+      <!-- input-group 作用是为了给 input 输入框加前缀和后缀 -->
       <div class="input-group mb-3">
         <!-- 添加一个前缀 -->
         <div class="input-group-prepend">
@@ -220,7 +219,7 @@
           <span class="input-group-text" id="">Name & Email</span>
         </div>
         <input class="form-control" type="text" placeholder="Full Name" />
-        <input class="form-control" type="email" placeholder="Email" />
+        <input class="form-control ml-3" type="email" placeholder="Email" />
       </div>
 
       <br />
@@ -232,6 +231,12 @@
           <button class="btn btn-primary" type="button">Search</button>
         </div>
       </div>
+    </div>
+
+    <div class="btn btn-toolbar">
+      <button class="btn btn-warning">jjjj</button>
+      <!-- input 这里和 input-group 结合，才能和 button 处在同一行上 -->
+      <input type="text" class="form-control input-group ml-4" />
     </div>
     <!-- ./container -->
     <div style="margin-top: 500px;"></div>

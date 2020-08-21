@@ -92,7 +92,7 @@
         <!--################START HERE################-->
 
         <!-- BUTTONS -->
-        <!-- 这里的 type 有什么用？？？？ -->
+        <!-- 这里的 type 的作用是限定某种操作。如果是 submit，则会默认提交 form，如果是 reset 则会默认 rest，如果是 button，则会和你的 js 相结合 -->
         <!-- 首先必须要添加的一个 class 是 btn，btn给出了许多button的默认attribute -->
         <!-- 如果要改变颜色，则用 btn-primary -->
         <button type="button" class="btn btn-primary">Primary</button>
@@ -111,15 +111,14 @@
         <!-- BUTTON TAGS/TYPES -->
         <!-- 给 anchor 添加 btn 这个类 -->
         <!-- 虽然看上去和普通的 button 是一致的，但是实际上是不同的 element -->
-        <!-- 不同点在哪里？？？？？ -->
-        <a href="#" role="button" class="btn btn-primary">Link</a>
+        <!-- input 和 button 的区别: With <button>, you can use img tags, etc. where text is -->
+        <!-- with <input> type, you are limited to text -->
+        <!-- 可以直接在 anchor 中添加 btn 这个class -->
+        <a href="http://google.com" role="button" class="btn btn-primary">Link</a>
         <button type="submit" class="btn btn-success">Button</button>
         <input type="button" value="Input" class="btn btn-light">
         <input type="submit" value="Submit" class="btn btn-warning">
         <input type="reset" value="Reset" class="btn btn-info">
-
-        <br>
-        <br>
 
         <!-- OUTLINE BUTTONS -->
         <!-- 这种 button 表面上看上去是空白只有边框的，但是当鼠标移动上去则会不一样 -->
@@ -139,7 +138,7 @@
         <!-- 使用 btn-lg 来表示大 -->
         <!-- 使用 btn-sm 来表示小 -->
         <!-- 使用 btn-block 来沾满整行-->
-        <button type="button" class="btn btn-primaary btn-lg">
+        <button type="button" class="btn btn-primary btn-lg">
             <!-- 引入一个 icon -->
             <i class="fa fa-user"></i> Large button</button>
         <button type="button">Small button</button>
@@ -152,11 +151,11 @@
 
         <!-- STATES -->
         <!-- active 会让颜色变得更深 -->
+        <!-- disable 可以让 button 变成无法点击的状态 -->
         <button type="button" class="btn btn-primary">Regular Button</button>
         <button type="button" class="btn btn-primary active">Active Button</button>
         <button type="button" class="btn btn-primary disabled">Disabled Button</button>
 
-        <!-- data-toggle 是干什么的？？？？ -->
         <button type="button" class="btn btn-primary" data-toggle="button">
             Toggle State
         </button>
@@ -175,7 +174,7 @@
         <br></br>
 
         <!-- BUTTON TOOLBAR -->
-        <!-- btn toolbar 是干什么的 -->
+        <!-- btn-toolbar 可以把 button 和别 component 结合起来，比如加入 input  -->
         <div class="btn btn-toolbar">
             <div class="btn btn-group mr-2">
                 <button type="button" class="btn btn-primary">1</button>
