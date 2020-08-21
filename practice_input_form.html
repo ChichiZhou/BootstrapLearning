@@ -57,6 +57,10 @@
             class="form-control"
             placeholder="Enter name"
           />
+          <!-- 添加下面的小字作为注释 -->
+          <small class="form-text text-muted"
+            >Your Name will not ever be shared</small
+          >
         </div>
         <div class="form-group">
           <label for="passwordForBasicForm">Password</label>
@@ -66,7 +70,91 @@
             placeholder="Enter password"
           />
         </div>
+        <div class="form-group">
+          <label for="disabledInput">Disabled</label>
+          <!-- 如果要 disable 某个东西，直接用 disabled 即可 -->
+          <input
+            type="text"
+            class="form-control"
+            placeholder="This is disabled"
+            disabled
+          />
+        </div>
+        <div class="form-group">
+          <label for="textarea">Textarea</label>
+          <!-- 没了 form-control，简直就是屎 -->
+          <textarea
+            class="form-control"
+            id="textarea"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="fileUpload">Upload</label>
+          <input type="file" class="form-control-file" />
+        </div>
+        <!-- 直接采用 custom-file -->
+        <div class="custom-file">
+          <input class="custom-file-input" type="file" id="myfile" />
+          <label class="custom-file-label" for="myfile">Choose file</label>
+        </div>
+        <!-- 表示 range -->
+        <div class="form-group">
+          <label for="customRange">Range</label>
+          <input
+            type="range"
+            class="custom-range"
+            min="1"
+            max="5"
+            step="1"
+            value="1"
+          />
+        </div>
       </form>
+      <!-- 在 form 中添加 checkbox 新建了一个 form -->
+      <form class="form-inline">
+        <input
+          class="form-control mr-2"
+          type="text"
+          id="username"
+          placeholder="Enter username"
+        />
+        <input
+          class="form-control mr-2"
+          type="text"
+          id="password"
+          placeholder="Password"
+        />
+        <!-- form-check 是什么 -->
+        <!-- form-check-label 是什么 -->
+        <!-- form-check-input 是什么 -->
+        <div class="form-check">
+          <label class="form-check-label mr-2">
+            <input type="checkbox" /> Remember me
+          </label>
+        </div>
+
+        <button class="form-check-input" type="submit">Submit</button>
+      </form>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input class="form-control is-valid" type="text" id="username" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input class="form-control is-invalid" type="text" id="password" />
+        <div class="invalid-feedback">
+          Password not strong enough
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password2">Confirm Password</label>
+        <input class="form-control" type="text" id="password2" />
+        <div>
+          Password does not match
+        </div>
+      </div>
     </div>
 
     <script
