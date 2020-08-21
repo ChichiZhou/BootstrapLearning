@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+
+    <title>Bootstrap Sandbox</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <!--##################START HERE###################-->
+      <!-- 各种颜色的 alert -->
+      <div class="alert alert-primary">
+        Alert Primary
+      </div>
+      <div class="alert alert-secondary">
+        Alert Secondary
+      </div>
+      <div class="alert alert-success">
+        Alert Success
+      </div>
+      <!-- 添加一个能够关闭的 alert -->
+      <!-- 这里用到了 data-dismiss -->
+      <div class="alert alert-success alert-dismissible">
+        <button class="close" data-dismiss="alert" type="button">
+          <span>&times;</span>
+        </button>
+        <strong>Dismissable</strong> Blog post added
+      </div>
+      <h2>Progress Bar</h2>
+      <div class="progress">
+        <div
+          class="progress-bar bg-success progress-bar-striped"
+          style="width: 35%;"
+        >
+          35%
+        </div>
+      </div>
+      <br />
+      <div class="progress">
+        <div class="progress-bar bg-success" style="width: 70%;">70%</div>
+      </div>
+      <br />
+      <h2>Table</h2>
+      <!-- 创建 Table -->
+      <!-- 如果没有 class="table"，则会变得十分丑陋 -->
+      <!-- table-light 让 table 变成浅色；table-dark 让 table 变成深色 -->
+      <!-- table-striped 让 table 变成条纹状 -->
+      <!-- table-bordered 让四边都有框；table-borderless 让四边都没框 -->
+      <!-- table-hover 鼠标点上会变灰色 -->
+
+      <table class="table table-light table-striped table-bordered table-hover">
+        <thead>
+          <tr class="table-danger">
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 让每行变成不同颜色 -->
+          <tr class="table-warning">
+            <!-- 这个 scope="row" 好像没什么用-->
+            <th scope="row">1</th>
+            <td>John</td>
+            <td>Doe</td>
+            <td>jdoe@gmail.com</td>
+          </tr>
+          <tr class="table-success">
+            <th scope="row">2</th>
+            <td>Will</td>
+            <td>Johnson</td>
+            <td>will@yahoo.com</td>
+          </tr>
+          <tr class="table-primary">
+            <th scope="row">3</th>
+            <td>Shannon</td>
+            <td>Williams</td>
+            <td>shannon@yahoo.com</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Pagination</h2>
+      <!-- 添加一个下一页栏目 -->
+      <!-- 实际上还是以 navbar -->
+      <!-- justify-content-center 表示把这个放在正中间 -->
+      <!-- 其它方向：右边：justify-content-end； 左边：justify-content-start -->
+
+      <nav>
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="#">Previous</a>
+          </li>
+          <li class="page-item">
+            <a href="#" class="page-link">1</a>
+          </li>
+          <li class="page-item">
+            <a href="#" class="page-link">2</a>
+          </li>
+          <li class="page-item">
+            <a href="#" class="page-link">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- 这里写成 nav 或者 div 根本没什么区别，只要 class 不变即可 -->
+      <nav>
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="#"
+              ><span>&laquo;</span> <span class="sr-only">Previous</span></a
+            >
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#"
+              ><span>&raquo;</span> <span class="sr-only">Next</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
