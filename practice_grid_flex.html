@@ -12,12 +12,22 @@
     />
 
     <title>Bootstrap Sandbox</title>
+    <style>
+      .row-hezho {
+        background: #f4f4f4;
+        height: 250px;
+      }
+
+      .item-hezho {
+        border: 1px solid #333;
+      }
+    </style>
   </head>
 
   <body>
-    <div class="container">
+    <div class="container bg-success">
       <!--##################START HERE###################-->
-      <!-- row 的作用是将里面的 div 都弄到一行上 -->
+      <!-- row 的作用是将里面的 div 都弄到一行上，因为 row 中包含了 display: flex -->
       <div class="row">
         <div class="col-8">
           One of three columns
@@ -27,6 +37,109 @@
         </div>
         <div class="col-sm">
           One of three columns
+        </div>
+      </div>
+
+      <!-- d-flex 表示这里使用 flex，这个 div 是一个 flex 的 container -->
+      <!-- 默认情况下是 flex-row -->
+      <!-- 使用 flex-column 可以把轴变成竖直方向 -->
+      <!-- justify-content-start 用来排版位置-->
+      <!-- justify-content-center -->
+      <!-- justify-content-end -->
+      <h2>flex-column 不添加 justify-content-between</h2>
+      <div class="d-flex flex-column row-hezho mb-5">
+        <div class="item-hezho">Flex Item</div>
+        <div class="item-hezho">Flex Item</div>
+        <div class="item-hezho">Flex Item</div>
+      </div>
+      <h2>flex-column 添加 justify-content-between</h2>
+      <div class="d-flex flex-column row-hezho mb-5 justify-content-between">
+        <div class="item-hezho">Flex Item</div>
+        <div class="item-hezho">Flex Item</div>
+        <div class="item-hezho">Flex Item</div>
+      </div>
+      <h2>flex-row 不添加 justify-content-between</h2>
+      <div class="d-flex flex-row row-hezho mb-5">
+        <div class="item-hezho">Flex Item</div>
+        <div class="item-hezho">Flex Item</div>
+        <div class="item-hezho">Flex Item</div>
+      </div>
+      <h2>flex-row 添加 justify-content-between</h2>
+      <div class="d-flex flex-row row-hezho justify-content-between mb-5">
+        <div class="item-hezho">Flex Item</div>
+        <div class="item-hezho">Flex Item</div>
+        <div class="item-hezho">Flex Item</div>
+      </div>
+      <h2>flex-row 使用 flex-column-start</h2>
+      <div class="d-flex align-items-stretch row-hezho mb-5">
+        <div class="item-hezho">Flex Item</div>
+        <div class="item-hezho">Flex Item</div>
+        <div class="item-hezho">Flex Item</div>
+      </div>
+
+      <div class="d-flex row-hezho mb-5">
+        <div class="align-self-start item-hezho">Flex Item</div>
+        <div class="align-self-center item-hezho">Flex Item</div>
+        <div class="align-self-end item-hezho">Flex Item</div>
+        <div class="align-self-baseline item-hezho">Flex Item</div>
+        <div class="align-self-stretch item-hezho">Flex Item</div>
+      </div>
+      <h2>Grid System</h2>
+      <!-- 如果使用 row，则会把整个 container 都占了 -->
+      <div class="row">
+        <!-- row 把 container 变成了 flex container，这样就把两个row变到一行里了-->
+        <!-- class="col-sm-6" 如果是 small，则占 6 个 columns -->
+        <div
+          class="col-sm-6 col-md-8 col-lg-9 col-xl-10"
+          style="border: 1px solid #333;"
+        >
+          <ul>
+            <li>6 column on small screens</li>
+            <li>8 column on medium screen</li>
+            <li>9 column on large screen</li>
+            <li>10 column on xlarge screen</li>
+          </ul>
+        </div>
+        <div
+          class="col-sm-6 col-md-4 col-lg-3 col-xl-2"
+          style="border: 1px solid #333;"
+        >
+          <ul>
+            <li>6 column on small screens</li>
+            <li>4 column on medium screen</li>
+            <li>3 column on large screen</li>
+            <li>2 column on xlarge screen</li>
+          </ul>
+        </div>
+      </div>
+      <h2>Grid col</h2>
+      <!-- col 用来抢占 列数 -->
+      <div class="row">
+        <div style="border: 1px solid #333;">Equal Width</div>
+        <div class="col" style="border: 1px solid #333;">Equal Width</div>
+        <div class="col" style="border: 1px solid #333;">Equal Width</div>
+        <div class="col" style="border: 1px solid #333;">Equal Width</div>
+      </div>
+      <h2>Col-sm</h2>
+      <div class="d-flex flex-row">
+        <div class="col-sm" style="border: 1px solid #333;">Equal Width</div>
+        <div class="col-sm" style="border: 1px solid #333;">Equal Width</div>
+        <div class="col-sm" style="border: 1px solid #333;">Equal Width</div>
+        <div class="col-sm" style="border: 1px solid #333;">Equal Width</div>
+      </div>
+      <h2>OFF SET</h2>
+      <div class="row">
+        <!-- 6 column div offset by 3 -->
+        <div class="col-md-6 offset-md-3" style="border: 1px solid #333;">
+          .col-md-6 .offset-md-3
+        </div>
+      </div>
+      <h2>md</h2>
+      <div>
+        <!-- 2 4 column divs, the second offset by 4 -->
+        <div class="col-md-4" style="border: 1px solid #333;">.col-md-4</div>
+        <div class="md-4 offset-md-4" style="border: 1px solid #333;">
+          .col-md-4 .offset-md-4
         </div>
       </div>
     </div>
