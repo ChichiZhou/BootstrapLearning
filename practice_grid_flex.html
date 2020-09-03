@@ -10,6 +10,12 @@
       integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
 
     <title>Bootstrap Sandbox</title>
     <style>
@@ -28,6 +34,7 @@
     <div class="container bg-success">
       <!--##################START HERE###################-->
       <!-- row 的作用是将里面的 div 都弄到一行上，因为 row 中包含了 display: flex -->
+      <h2>使用 row</h2>
       <div class="row">
         <div class="col-8">
           One of three columns
@@ -38,6 +45,13 @@
         <div class="col-sm">
           One of three columns
         </div>
+      </div>
+
+      <h2>不用 d-flex 的话，display 会变成 block</h2>
+      <div class="d-flex flex-row row-hezho mb-5">
+        <div class="item-hezho">Flex Item</div>
+        <div class="item-hezho">Flex Item</div>
+        <div class="item-hezho">Flex Item</div>
       </div>
 
       <!-- d-flex 表示这里使用 flex，这个 div 是一个 flex 的 container -->
@@ -140,6 +154,16 @@
         <div class="col-md-4" style="border: 1px solid #333;">.col-md-4</div>
         <div class="md-4 offset-md-4" style="border: 1px solid #333;">
           .col-md-4 .offset-md-4
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="p-4 align-self-start">
+          <i class="fas fa-check fa-2x"></i>
+        </div>
+        <div class="p-4 align-self-end">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+          distinctio iusto, perspiciatis mollitia natus harum?
         </div>
       </div>
     </div>

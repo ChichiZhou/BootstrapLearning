@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Bootstrap Sandbox</title>
+  </head>
+
+  <body>
+    
+      <!--##################START HERE###################-->
+      <!-- Create Basic Navbars -->
+      <nav class="navbar navbar-expand-sm navbar-light bg-light mb-5">
+        <div class="container">
+            <a class="navbar-brand">NavbarBrand</a>
+            <ul class="navbar-nav">
+                <li class="navbar-item"><a href="#" class="nav-link">fff</a></li>
+                <li class="navbar-item"><a href="#" class="nav-link">ggg</a></li>
+                <li class="navbar-item"><a href="#" class="nav-link">ddd</a></li>
+                <li class="navbar-item"><a href="#" class="nav-link">ccc</a></li>
+              </ul>
+        </div>
+      </nav>
+
+      <!-- Create a nav with collapse -->
+      <nav class="navbar navbar-expand-sm navbar-light bg-light mb-5">
+          <div class="container">
+            <a href="#" class="nabar-brand">HELLO WORD</a>
+            <button class="collapse" data-toggle="collapse"></button>
+            <ul class="navbar-nav navbar-collapse">
+
+            </ul>
+          </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-sm navbar-light bg-light mb-5">
+        <div class="container">
+          <!-- 前后顺序 -->
+          <a href="#" class="navbar-brand">HELLO</a>
+          <!-- 如果没有 navbar-toggler 则这个 button 会一直出现而不是先隐藏再出现 -->
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#jjj"><span class="navbar-toggler-icon"></span></button>
+          <!-- collapse navbar-collapse 可以放在 div 或者 ul 中都可以 -->
+          <!-- 区别在于不同的排版方式 -->
+          <div class="collapse navbar-collapse" id="jjj">
+            <ul class="navbar-nav">
+              <li class="navbar-item"><a href="#" class="nav-link">HELLO A</a></li>
+              <li class="navbar-item"><a href="#" class="nav-link">HELLO B</a></li>
+              <li class="navbar-item"><a href="#" class="nav-link">HELLO C</a></li>
+            </ul>
+          </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-sm navbar-light bg-light mb-5">
+        <div class="container">
+          <a href="#" class="navbar-brand">HELLO THERE</a>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#hithere">EXPAND</button>
+          <div class="collapse navbar-collapse" id="hithere">
+            <ul class="navbar-nav">
+              <li class="navbar-item"><a href="#" class="nav-link">hahahaha</a></li>
+              <li class="navbar-item"><a href="#" class="nav-link">heiheiheihei</a></li>
+              <li class="navbar-item"><a href="#" class="nav-link">xixixixi</a></li>
+            </ul>
+            <form class="d-flex">
+              <input type="text" class="form-control mr-2" placeholder="Search">
+              <button class="btn btn-outline">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container mb-5">
+        <div class="form-group">
+          <label for="textarea">Textarea</label>
+          <!-- 没了 form-control，简直就是屎 -->
+          <textarea
+            class="form-control"
+            id="textarea"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <!-- form-group 限定了 mb 为 1 -->
+          <label for="nameForBasicForm">Name</label>
+          <!-- form-control 限定了 display 为 block -->
+          <input
+            id="nameForBasicForm"
+            type="text"
+            class="form-control"
+            placeholder="Enter name"
+          />
+          <!-- 添加下面的小字作为注释 -->
+          <small class="form-text text-muted"
+            >Your Name will not ever be shared</small
+          >
+          <button class="btn btn-primary">Click</button>
+        </div>
+      </div>
+
+      <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container">
+          <a href="#" class="navbar-brand">DropDown</a>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#hidropdown"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="hidropdown">
+            <ul class="navbar-nav">
+              <li class="navbar-item"><a href="#" class="nav-link">hahahaha</a></li>
+              <li class="navbar-item"><a href="#" class="nav-link">heiheiheihei</a></li>
+              <li class="navbar-item dropdown">
+                <!-- dropdown-toggle 的作用是一个下拉的箭头 -->
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">xixixixi</a>
+                <!-- <ul class="dropdown-menu">
+                  <li class="dropdown-item"><a href="#">Link 1</a></li>
+                  <li class="dropdown-item"><a href="#">Link 2</a></li>
+                  <li class="dropdown-item"><a href="#">Link 3</a></li>
+                </ul> -->
+                <div class="dropdown-menu">
+                  <a href="#" class="dropdown-item">Link 1</a>
+                  <a href="#" class="dropdown-item">Link 2</a>
+                  <a href="#" class="dropdown-item">Link 3</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+<!-- 新 Bootstrap4 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+ 
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+ 
+<!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+<script src="https://cdn.staticfile.org/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
+<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
